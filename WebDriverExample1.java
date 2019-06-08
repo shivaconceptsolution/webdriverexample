@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class WebDriverExample1 {
@@ -11,12 +12,16 @@ public class WebDriverExample1 {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver","c:\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://home.hubilo.com/request-a-free-hubilo-demo");
-		/*String str = driver.getCurrentUrl();
+		driver.get("http://www.hubilo.com");
+		driver.manage().window().maximize();
+		String str = driver.getCurrentUrl();
 		System.out.println(str);
 		WebElement sol = driver.findElement(By.linkText("SOLUTIONS"));
-		sol.click();
-		System.out.println("Data of Solution DropDown");
+		Actions ac = new Actions(driver);
+		ac.moveToElement(sol).perform();
+		
+		//sol.click();
+		/*System.out.println("Data of Solution DropDown");
 		List<WebElement> elements = driver.findElements(By.className("feature-name")); 
 		  for (int i = 0; i < elements.size(); i++) {
 		     
@@ -52,10 +57,10 @@ public class WebDriverExample1 {
 		msg.sendKeys("i want to conduct event");*/
 		//WebElement chk= driver.findElement(By.xpath("//html/body/div[2]"));
 		//chk.click();
-		driver.findElement(By.name("mx_Consent")).click();
-		driver.findElement(By.id("request-demo-button")).click();
+		//driver.findElement(By.name("mx_Consent")).click();
+		//driver.findElement(By.id("request-demo-button")).click();
 		
-    driver.close();
+//    driver.close();
 	}
 
 }
