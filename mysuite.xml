@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+    <test name="SCS CLASSES">
+        <classes>
+            <class name="scs.TestNgDemo2" />
+        </classes>
+    </test>
+    <test name="SCS1 CLASSES">
+        <classes>
+            <class name="scs1.Example2" />
+        </classes>
+    </test>
+</suite>
